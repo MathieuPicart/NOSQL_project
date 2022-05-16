@@ -20,6 +20,11 @@ export default function Profile() {
     fetchUser();
   }, [username]);
 
+  const logout = () => {
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  };
+
   return (
     <>
       <Topbar />
@@ -56,7 +61,9 @@ export default function Profile() {
             <Feed username={username} />
             <Rightbar user={user} />
           </div>
+          <button className="logoutBtn" onClick={logout}>Logout</button>
         </div>
+        
       </div>
     </>
   );
