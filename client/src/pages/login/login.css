@@ -81,6 +81,8 @@
 .loginRegisterButton{
     width: 60%;
     align-self: center;
+    padding-left: 150px ;
+    padding-top: 15px ;
     height: 50px;
     border-radius: 10px;
     border: none;
