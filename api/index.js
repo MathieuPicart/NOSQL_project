@@ -13,16 +13,9 @@ const path = require("path");
 
 dotenv.config();
 
-const CONNECTION_URL = "mongodb+srv://mayt:mayt123@cluster0.3flow.mongodb.net/TP_NOSQL?retryWrites=true&w=majority"
+const CONNECTION_URL = "adresse mongodb"
 const PORT = process.env.PORT || 8800;
 
-// mongoose.connect(
-//   CONNECTION_URL,
-//   { useNewUrlParser: true, useUnifiedTopology: true },
-//   () => {
-//     console.log("Connected to MongoDB");
-//   }
-// );
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //middleware
@@ -55,6 +48,3 @@ app.use("/api/posts", postRoute);
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
-// app.listen(8800, () => {
-//   console.log("Backend server is running!");
-// });
