@@ -38,6 +38,17 @@
   list-style: none;
 }
 
+.rightbarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rightbarProfileImgContainer {
+  margin-right: 10px;
+  position: relative;
+}
+
 .rightbarTitle{
   font-size: 18px;
   font-weight: 500;
